@@ -4,6 +4,7 @@ import px2vw from "../../utils/px2vw";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const ContentContainer = styled.div`
@@ -14,7 +15,7 @@ export const ContentContainer = styled.div`
 
 export const ActionBox = styled.div`
   width: 70%;
-  height: ${px2vw(300, 768)};
+  height: ${px2vw(270, 768)};
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -69,7 +70,7 @@ export const ImageBox = styled.div`
 
 export const ImageMapBox = styled.div`
   height: 60%;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   @media only screen and (max-width: 700px) {

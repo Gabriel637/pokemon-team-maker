@@ -44,24 +44,24 @@ function Home() {
             <TextBox>
               {!loading && (
                 <Typist cursor={{ element: "" }}>
-                  Welcome Pokémon Trainer! <br />
+                  Welcome, Pokémon Trainer! <br />
                   <Typist.Delay ms={500} />
-                  Here you can make your dream team <br />
-                  <Typist.Delay ms={500} />
-                  Know better all Pokémon <br />
+                  All the information about Pokémon is here, discover
+                  everything.
+                  <br />
                   <Typist.Delay ms={500} />
                   Let's catch'em all!
                 </Typist>
               )}
             </TextBox>
-            <ButtonBox>
-              <Link to="/calculate">Open Pokedex</Link>
-            </ButtonBox>
           </ActionBox>
           <ImageMapBox>
             <Image src={KantoMap} />
           </ImageMapBox>
         </ContentContainer>
+        <ButtonBox>
+          <Link to="/pokedex">Open Pokedex</Link>
+        </ButtonBox>
       </Container>
     </>
   );
