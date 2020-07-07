@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Typist from "react-typist";
-import Phone from "../../assets/images/phone.png";
+import KantoMap from "../../assets/images/kantoMap.png";
 import HeaderStyled from "../../components/Header";
 import Loading from "../../components/Loading";
 import {
   ActionBox,
+  ButtonBox,
   Container,
   ContentContainer,
   Image,
   ImageBox,
-  Title,
+  TextBox,
 } from "./styles";
 
 function Home() {
@@ -27,23 +28,29 @@ function Home() {
       <Container>
         <ContentContainer>
           <ActionBox>
-            {!loading && (
-              <Typist cursor={{ element: "" }}>
-                <Title>Seja bem vindo à Telzir!</Title>
-                <Typist.Delay ms={500} />
-                <Title>
-                  Aqui o seu plano custa muito
+            <TextBox>
+              {!loading && (
+                <Typist cursor={{ element: "" }}>
+                  Welcome Pokémon Trainer! <br />
+                  <Typist.Delay ms={500} />
+                  Here you can make your dream team <br />
+                  <Typist.Delay ms={500} />
+                  Know better all Digim
                   <Typist.Backspace count={5} delay={200} />
-                  pouco.
-                </Title>
-                <Typist.Delay ms={500} />
-                <Title>Veja seu plano ideal!</Title>
-              </Typist>
-            )}
-            <Link to="/calculate">Conferir</Link>
+                  Pokémon <br />
+                  <Typist.Delay ms={500} />
+                  Compare all monsters <br />
+                  <Typist.Delay ms={500} />
+                  Let's catch'em all!
+                </Typist>
+              )}
+            </TextBox>
+            <ButtonBox>
+              <Link to="/calculate">Open Pokedex</Link>
+            </ButtonBox>
           </ActionBox>
           <ImageBox>
-            <Image src={Phone} />
+            <Image src={KantoMap} />
           </ImageBox>
         </ContentContainer>
       </Container>

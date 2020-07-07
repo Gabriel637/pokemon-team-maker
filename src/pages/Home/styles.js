@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import px2vw from "../../utils/px2vw";
 
 export const Container = styled.div`
-  height: 700px;
   display: flex;
   flex-direction: column;
 `;
@@ -14,10 +14,9 @@ export const ContentContainer = styled.div`
 
 export const ActionBox = styled.div`
   width: 70%;
-  height: 50%;
+  height: ${px2vw(250, 768)};
   padding-left: 50px;
   display: flex;
-  align-self: center;
   flex-direction: column;
   justify-content: space-between;
   @media only screen and (max-width: 500px) {
@@ -25,32 +24,35 @@ export const ActionBox = styled.div`
     padding-left: 35px;
     padding-right: 35px;
   }
+`;
+
+export const TextBox = styled.div`
+  margin-top: 5%;
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 50px;
+  @media only screen and (max-width: 1500px) {
+    font-size: 30px;
+  }
+`;
+
+export const ButtonBox = styled.div`
   a {
-    width: 300px;
-    height: 50px;
+    width: ${px2vw(200, 768)};
+    height: ${px2vw(30, 768)};
     display: flex;
+    text-decoration: none;
     border-radius: 7px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-      90deg,
-      rgba(33, 79, 124, 1) 0%,
-      rgba(102, 148, 193, 1) 86%
-    );
+    background: red;
     font-family: Arial;
     color: #ffffff;
     font-size: 24px;
     @media only screen and (max-width: 500px) {
       width: 100%;
     }
-  }
-`;
-
-export const Title = styled.h1`
-  color: black;
-  font-size: 35px;
-  @media only screen and (max-width: 1500px) {
-    font-size: 30px;
   }
 `;
 
