@@ -14,37 +14,46 @@ export const ContentContainer = styled.div`
 `;
 
 export const ActionBox = styled.div`
-  width: 70%;
-  height: ${px2vw(270, 768)};
-  padding-left: 50px;
+  width: 100%;
+  height: ${px2vw(1400)};
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  @media only screen and (max-width: 500px) {
+  @media (min-width: 768px) {
     width: 100%;
-    padding-left: 35px;
-    padding-right: 35px;
+    height: ${px2vw(400, 768)};
+  }
+  @media (min-width: 1024px) {
+    width: 50%;
+    height: ${px2vw(500)};
   }
 `;
 
 export const TextBox = styled.div`
   width: 90%;
-  min-height: ${px2vw(60, 768)};
-  max-height: ${px2vw(60, 768)};
+  min-height: ${px2vw(200, 768)};
   border: 5px double gray;
   padding: 10px;
   border-radius: 5px;
-  color: black;
   font-size: 22px;
   font-family: "FreePixel";
   line-height: 25px;
+  @media (min-width: 768px) {
+    width: 70%;
+    min-height: ${px2vw(100, 768)};
+  }
+  @media (min-width: 1024px) {
+    width: 80%;
+    min-height: ${px2vw(100)};
+  }
 `;
 
 export const ButtonBox = styled.div`
   a {
-    width: ${px2vw(200, 768)};
-    height: ${px2vw(30, 768)};
+    width: ${px2vw(800)};
+    height: ${px2vw(200)};
+    margin-top: 5%;
     display: flex;
     text-decoration: none;
     border-radius: 7px;
@@ -54,8 +63,13 @@ export const ButtonBox = styled.div`
     font-family: Arial;
     color: #ffffff;
     font-size: 24px;
-    @media only screen and (max-width: 500px) {
-      width: 100%;
+    @media (min-width: 768px) {
+      width: ${px2vw(400)};
+      height: ${px2vw(100)};
+    }
+    @media (min-width: 1024px) {
+      width: ${px2vw(300)};
+      height: ${px2vw(60)};
     }
   }
 `;
@@ -69,30 +83,41 @@ export const ImageBox = styled.div`
 `;
 
 export const ImageMapBox = styled.div`
-  height: 60%;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  @media only screen and (max-width: 700px) {
-    display: none;
+  display: none;
+  @media (min-width: 1024px) {
+    width: 50%;
+    min-height: ${px2vw(500)};
+    height: 100%;
+    display: flex;
+    flex-direction: row;
   }
 `;
 
 export const ProfessorImage = styled.div`
   width: 30%;
-  height: ${px2vw(170, 768)};
+  height: ${px2vw(700)};
   align-self: flex-end;
-  @media only screen and (max-width: 700px) {
-    display: none;
+  @media (min-width: 768px) {
+    width: 20%;
+    height: ${px2vw(400)};
+  }
+  @media (min-width: 1024px) {
+    width: 30%;
+    height: ${px2vw(350)};
   }
 `;
 
 export const PokemonImage = styled.div`
   width: 20%;
-  height: ${px2vw(60, 768)};
+  height: ${px2vw(300)};
   align-self: flex-end;
-  @media only screen and (max-width: 700px) {
-    display: none;
+  @media (min-width: 768px) {
+    width: 10%;
+    height: ${px2vw(150)};
+  }
+  @media (min-width: 1024px) {
+    width: 20%;
+    height: ${px2vw(120)};
   }
 `;
 

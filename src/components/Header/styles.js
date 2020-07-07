@@ -1,24 +1,23 @@
 import styled from "styled-components";
+import px2vw from "../../utils/px2vw";
 
 export const HeaderStyled = styled.header`
-  height: 120px;
   width: 100%;
+  height: ${px2vw(200)};
   display: flex;
   justify-content: center;
-    @media only screen and (max-width: 800px) {
-      width: 50%;
-    }
-    @media only screen and (min-width: 801px) and (max-width: 1200px) {
-      width: 20%;
-    }
+  @media (min-width: 768px) {
+    width: 100%;
+    height: ${px2vw(200)};
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: ${px2vw(120)};
   }
 `;
 
 export const Image = styled.img`
-  width: 20%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
-  @media only screen and (max-width: 800px) {
-    width: 40%;
-  }
 `;
