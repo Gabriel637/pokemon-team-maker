@@ -18,7 +18,8 @@ export const ActionBox = styled.div`
   padding-left: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   @media only screen and (max-width: 500px) {
     width: 100%;
     padding-left: 35px;
@@ -27,11 +28,15 @@ export const ActionBox = styled.div`
 `;
 
 export const TextBox = styled.div`
-  margin-top: 5%;
+  width: 90%;
+  height: ${px2vw(70, 768)};
+  border: 5px double gray;
+  padding: 10px;
+  border-radius: 5px;
   color: black;
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 50px;
+  font-size: 28px;
+  font-family: "FreePixel";
+  line-height: 30px;
   @media only screen and (max-width: 1500px) {
     font-size: 30px;
   }
