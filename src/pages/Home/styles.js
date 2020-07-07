@@ -14,7 +14,7 @@ export const ContentContainer = styled.div`
 
 export const ActionBox = styled.div`
   width: 70%;
-  height: ${px2vw(250, 768)};
+  height: ${px2vw(300, 768)};
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -29,17 +29,15 @@ export const ActionBox = styled.div`
 
 export const TextBox = styled.div`
   width: 90%;
-  height: ${px2vw(70, 768)};
+  min-height: ${px2vw(60, 768)};
+  max-height: ${px2vw(60, 768)};
   border: 5px double gray;
   padding: 10px;
   border-radius: 5px;
   color: black;
-  font-size: 28px;
+  font-size: 22px;
   font-family: "FreePixel";
-  line-height: 30px;
-  @media only screen and (max-width: 1500px) {
-    font-size: 30px;
-  }
+  line-height: 25px;
 `;
 
 export const ButtonBox = styled.div`
@@ -62,8 +60,36 @@ export const ButtonBox = styled.div`
 `;
 
 export const ImageBox = styled.div`
-  height: 100%;
+  height: 60%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const ImageMapBox = styled.div`
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const ProfessorImage = styled.div`
+  width: 30%;
+  height: ${px2vw(170, 768)};
+  align-self: flex-end;
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const PokemonImage = styled.div`
+  width: 20%;
+  height: ${px2vw(60, 768)};
+  align-self: flex-end;
   @media only screen and (max-width: 700px) {
     display: none;
   }

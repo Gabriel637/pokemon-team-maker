@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Typist from "react-typist";
 import KantoMap from "../../assets/images/kantoMap.png";
+import OakProfessor from "../../assets/images/oakProfessor.png";
+import Squirtle from "../../assets/images/squirtle.png";
 import HeaderStyled from "../../components/Header";
 import Loading from "../../components/Loading";
 import {
@@ -11,6 +13,9 @@ import {
   ContentContainer,
   Image,
   ImageBox,
+  ImageMapBox,
+  PokemonImage,
+  ProfessorImage,
   TextBox,
 } from "./styles";
 
@@ -28,6 +33,14 @@ function Home() {
       <Container>
         <ContentContainer>
           <ActionBox>
+            <ImageBox>
+              <ProfessorImage>
+                <Image src={OakProfessor} />
+              </ProfessorImage>
+              <PokemonImage>
+                <Image src={Squirtle} />
+              </PokemonImage>
+            </ImageBox>
             <TextBox>
               {!loading && (
                 <Typist cursor={{ element: "" }}>
@@ -35,11 +48,7 @@ function Home() {
                   <Typist.Delay ms={500} />
                   Here you can make your dream team <br />
                   <Typist.Delay ms={500} />
-                  Know better all Digim
-                  <Typist.Backspace count={5} delay={200} />
-                  Pokémon <br />
-                  <Typist.Delay ms={500} />
-                  Compare all monsters <br />
+                  Know better all Pokémon <br />
                   <Typist.Delay ms={500} />
                   Let's catch'em all!
                 </Typist>
@@ -49,9 +58,9 @@ function Home() {
               <Link to="/calculate">Open Pokedex</Link>
             </ButtonBox>
           </ActionBox>
-          <ImageBox>
+          <ImageMapBox>
             <Image src={KantoMap} />
-          </ImageBox>
+          </ImageMapBox>
         </ContentContainer>
       </Container>
     </>
